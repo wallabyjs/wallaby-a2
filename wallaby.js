@@ -8,21 +8,25 @@ module.exports = function () {
         pattern: 'node_modules/systemjs/dist/system-polyfills.js',
         instrument: false
       }, {
+        pattern: 'node_modules/angular2/bundles/angular2-polyfills.js',
+        instrument: false
+      }, {
         pattern: 'node_modules/systemjs/dist/system.js',
         instrument: false
       }, {
-        pattern: 'node_modules/reflect-metadata/Reflect.js',
+        pattern: 'node_modules/rxjs/bundles/Rx.js',
         instrument: false
       }, {
-        pattern: 'node_modules/zone.js/dist/zone.js',
+        pattern: 'node_modules/angular2/bundles/angular2.dev.js',
         instrument: false
       }, {
-        pattern: 'node_modules/zone.js/dist/long-stack-trace-zone.js',
+        pattern: 'node_modules/angular2/bundles/http.dev.js',
         instrument: false
       }, {
-        pattern: 'node_modules/zone.js/dist/jasmine-patch.js',
+        pattern: 'node_modules/angular2/bundles/testing.dev.js',
         instrument: false
       },
+
 
       {
         pattern: 'app/**/*.ts',
@@ -50,22 +54,15 @@ module.exports = function () {
       wallaby.delayStart();
 
       System.config({
-        defaultJSExtensions: true,
         packages: {
           app: {
+            defaultExtension: 'js',
             meta: {
               '*': {
                 scriptLoad: true
               }
             }
           }
-        },
-        paths: {
-          'npm:*': 'node_modules/*'
-        },
-        map: {
-          'angular2': 'npm:angular2',
-          'rxjs': 'npm:rxjs'
         }
       });
 
