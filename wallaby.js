@@ -11,6 +11,9 @@ module.exports = function () {
         pattern: 'node_modules/angular2/bundles/angular2-polyfills.js',
         instrument: false
       }, {
+        pattern: 'node_modules/zone.js/dist/async-test.js',
+        instrument: false
+      }, {
         pattern: 'node_modules/systemjs/dist/system.js',
         instrument: false
       }, {
