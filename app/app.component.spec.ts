@@ -1,15 +1,12 @@
 import {
   it,
-  iit,
   describe,
-  ddescribe,
   expect,
-  inject,
-  injectAsync,
-  TestComponentBuilder,
-  beforeEachProviders
-} from 'angular2/testing';
-import {provide} from 'angular2/core';
+  injectAsync
+} from '@angular/core/testing';
+import {
+    TestComponentBuilder
+} from '@angular/compiler/testing';
 import {AppComponent} from './app.component';
 
 describe('AppComponent', () => {
